@@ -5,7 +5,7 @@ RUN apk add --no-cache --virtual .build-deps \
         musl-dev \
         libxml2-dev \
         libxslt-dev \
-    && apk add --no-cache $(echo $(wget --no-check-certificate -qO- https://raw.githubusercontent.com/Hiddenl/nas-tools-unlock/master/package_list.txt)) \
+    && apk add --no-cache $(echo $(wget --no-check-certificate -qO- https://raw.githubusercontent.com/wangrui1573/nas-tools-unlock/master/package_list.txt)) \
     && ln -sf /usr/bin/python3 /usr/bin/python \
     && curl https://rclone.org/install.sh | bash \
     && if [ "$(uname -m)" = "x86_64" ]; then ARCH=amd64; elif [ "$(uname -m)" = "aarch64" ]; then ARCH=arm64; fi \
